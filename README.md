@@ -1,5 +1,4 @@
 # Flatdango
-
 Flatdango is a mini web application that allows users to purchase movie tickets from the Flatiron Movie Theater. Users can view movie details, see available tickets, and buy tickets for their favorite films.
 
 ## Table of Contents
@@ -8,7 +7,7 @@ Flatdango is a mini web application that allows users to purchase movie tickets 
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Contributing](#contributing)
+- [Author](#author)
 - [License](#license)
 
 ## Features
@@ -31,7 +30,7 @@ To run this project locally, follow these steps:
 
 1. **Clone the repository:**
 Open the ubuntu terminal or the Visual Studio terminal and clone your repository
-  - git clone https://github.com/yourusername/flatdango.git
+  - git clone (git clone git@github.com:......git <--the ssh code -->)
   - cd(to open the cloned directory to start working on the project)
 2. **Install JSON Server:**
 If you don't have JSON Server installed, you can install it globally using npm:
@@ -50,7 +49,7 @@ If you don't have JSON Server installed, you can install it globally using npm:
 5. **Open the application:**
  Open index.html in your web browser to view the application. 
 
-6. **Usage**
+## Usage
 
 ***View Movies:***
 Movies are displayed in the sidebar on the left. Click on any movie to view its details in the main section.
@@ -59,24 +58,15 @@ Movies are displayed in the sidebar on the left. Click on any movie to view its 
 Click the "Buy Ticket" button to purchase a ticket. The remaining tickets count will update automatically. Once all tickets are sold, the button will display "Sold Out."
 
 ***Delete Movies:***
-To remove a movie from the list, click the "Delete Movie" button. The next movie will automatically load, or the details section will clear if no movies remain.
+To remove a movie from the list, click the "Delete" button. The next movie will automatically load, or the movie details section will clear if all the movies are deleted.
 
 ***Real-Time Updates:***
+The app dynamically updates the sidebar and movie details section based on user actions such as clicking the delete button or the movie list on the left.
 
-The app dynamically updates the sidebar and movie details section based on user actions.
+## Author:Martha Mwangi
+ If you encounter any issues with the code or need assistance, kindly reach out through:
+ - email ..<marthawanguimwangi4@gmail.com> 
+ - contact ..<+254745418529>
 
-***Contributing***
-Contributions are welcome! If you’d like to contribute to the project, follow these steps:
-
-1. Fork the repository.
-Create a new branch for your feature:
-
-2. Commit your changes:
-git commit -m "Add feature name"
-
-3. Push your branch:
-git push 
-
-4. Open a pull request on the main repository.
 ## License
-This project is licensed under the MIT License. You are free to use, modify, and distribute it. See the LICENSE file for details
+Copyright (c) 2024 Martha-Mwangii
