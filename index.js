@@ -1,6 +1,6 @@
-// Wait for the DOM content to fully load before executing the script
+// Ensures html  fully load before executing the js
 document.addEventListener("DOMContentLoaded", () => {
-  // Get references to elements in the HTML
+  // Selecting  DOM Elements by their ids
   const filmsList = document.getElementById("films"); // Sidebar film list container
   const poster = document.getElementById("poster"); // Movie poster element
   const title = document.getElementById("title"); // Movie title element
@@ -10,31 +10,31 @@ document.addEventListener("DOMContentLoaded", () => {
   const buyButton = document.getElementById("buy-ticket"); // Buy ticket button element
   const deleteButton = document.getElementById("delete-ticket"); // Delete movie button element
 
-  const apiUrl = "http://localhost:3000/films"; // URL of the API to fetch movie data
-  let selectedMovie = null; // Variable to track the currently selected movie
+  const apiUrl = "http://localhost:3000/films"; // The base URL of the API endpoint to manage the data
+  let selectedMovie = null; //Holds the currently selected movie's data (useful for displaying or updating movie details)
 
   // Fetch all films from the API and initialize the first movie
   function fetchFilms() {
-    fetch(apiUrl) // Make a GET request to the API
+    fetch(apiUrl) // Makes a GET request to the API
       .then((res) => res.json()) // Parse the response as JSON
       .then((films) => {
-        filmsList.innerHTML = ""; // Clear the sidebar list before populating it
+        filmsList.innerHTML = ""; // Clears the sidebar list before populating it
         if (films.length > 0) {
-          // If there are films in the response
-          films.forEach((film) => renderFilm(film)); // Render each film in the sidebar
+          // Check if there are any films in the response
+          films.forEach((film) => displayFilm(film)); //Iterates through the films array and display each film in the sidebar
           if (!selectedMovie) {
-            loadFilmDetails(films[0]); // Load details of the first movie by default
+            loadFilmDetails(films[0]); // Load details of the first movie(index 0) by default
           }
         } else {
-          clearDetails(); // If no films remain, clear the movie details section
+          clearDetails(); // If there are no movies available in the db.json clear the movie details section
         }
       })
-      .catch((err) => console.error("Error fetching films:", err)); // Log errors if fetching fails
+      .catch((err) => console.error("Error fetching films:", err)); //Logs any errors that occur during the fetch operation
   }
 
-  // Render a film in the sidebar
-  function renderFilm(film) {
-    const li = document.createElement("li"); // Create a new list item
+  // Display a film in the sidebar
+  function displayFilm(film) {
+    const li = document.createElement("li"); // Creates a new list item
     li.textContent = film.title; // Set the list item's text to the film title
     li.dataset.id = film.id; // Store the film's ID in a data attribute
 

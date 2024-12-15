@@ -38,8 +38,7 @@ If you don't have JSON Server installed, you can install it globally using npm:
   - npm install -g json-server
 
 3. **Create a db.json file:**
- Create a db.json file in the root of your project directory and populate it with the following sample data:
-
+ Create a db.json file in the same folder as your project and populate it with the sample data provided.
 
 4. **Start the JSON Server:**
  Run the following command to start the JSON server:
