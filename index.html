@@ -1,22 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Specifies the character encoding for the document -->
     <meta charset="UTF-8">
+    <!-- Ensures proper scaling on mobile devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title of the webpage, displayed in the browser tab -->
     <title>Flatdango</title>
+    <!-- Link to the external CSS stylesheet for styling the page -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Flatdango</h1>
-    <div id="movie-details">
-        <img id="poster" src="" alt="Movie Poster">
-        <h2 id="title"></h2>
-        <p id="runtime"></p>
-        <p id="showtime"></p>
-        <p id="available-tickets"></p>
-        <button id="buy-ticket">Buy Ticket</button>
+    <!-- Header section containing the title of the application -->
+    <header>
+        <h1>Flatiron Movie Theater</h1> <!-- Main title of the page -->
+    </header>
+
+    <!-- Main container for the layout -->
+    <div class="container">
+        <!-- Sidebar to display the list of available films -->
+        <aside id="sidebar">
+            <!-- Unordered list dynamically populated with movie data -->
+            <ul id="films"></ul> <!-- Placeholder for the list of movies -->
+        </aside>
+
+        <!-- Section for displaying the details of a selected movie -->
+        <section id="movie-details">
+            <!-- Placeholder for the movie poster -->
+            <img id="poster" src="" alt="Film Poster"> <!-- Movie poster image -->
+            <!-- Container for textual details of the movie -->
+            <div id="details">
+                <!-- Title of the selected movie -->
+                <h2 id="title"></h2>
+                <!-- Runtime of the selected movie -->
+                <p><strong>Runtime:</strong> <span id="runtime-value"></span></p>
+                <!-- Showtime of the selected movie -->
+                <p><strong>Showtime:</strong> <span id="showtime-value"></span></p>
+                <!-- Number of tickets available for the movie -->
+                <p><strong>Tickets:</strong> <span id="tickets-value"></span></p>
+
+                <!-- Button to buy a ticket for the selected movie -->
+                <button id="buy-ticket">Buy Ticket</button>
+                <!-- Button to delete the selected movie from the list -->
+                <button id="delete-ticket" class="delete-button">Delete</button>
+            </div>
+        </section>
     </div>
-    <ul id="films"></ul>
-    <script src="app.js"></script>
+
+    <!-- Link to the JavaScript file for adding interactivity -->
+    <script src="index.js"></script>
 </body>
 </html>
+
+
+
+
+
+

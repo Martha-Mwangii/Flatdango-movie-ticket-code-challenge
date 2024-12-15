@@ -1,0 +1,177 @@
+/* General resets */
+* {
+    margin: 0; /* Removes default margin from all elements */
+    padding: 0; /* Removes default padding from all elements */
+    box-sizing: border-box; /* Ensures padding and border are included in element dimensions */
+}
+
+body {
+    font-family: Arial, sans-serif; /* Sets the global font style */
+    background-color: #000; /* Black background for the entire page */
+    padding: 20px; /* Adds space around the content */
+}
+
+/* Header styling */
+header {
+    text-align: center; /* Centers the header text */
+    margin-bottom: 20px; /* Adds spacing below the header */
+}
+
+h1 {
+    font-size: 2.5rem; /* Sets the font size for the main title */
+    color: #e50914; /* Netflix-inspired red color for the title */
+}
+
+/* Layout container for the sidebar and main section */
+.container {
+    display: flex; /* Enables a side-by-side layout */
+    gap: 20px; /* Adds spacing between sidebar and main content */
+    align-items: stretch; /* Ensures equal height for child elements */
+    height: 100vh; /* Makes the layout span the full viewport height */
+}
+
+/* Sidebar styling (Left Container) */
+aside#sidebar {
+    flex: 1; /* Takes up 1 part of the container's width */
+    background-color: #007bff; /* Bright blue background */
+    padding: 15px; /* Adds space inside the sidebar */
+    border-radius: 8px; /* Rounds the corners */
+    overflow-y: auto; /* Enables vertical scrolling for long lists */
+    color: #fff; /* White text for contrast */
+    border: 1px solid #0056b3; /* Adds a slightly darker border for contrast */
+}
+
+/* Styling for the movie list in the sidebar */
+ul#films {
+    list-style: none; /* Removes default list styling (bullets) */
+}
+
+ul#films li {
+    margin: 10px 0; /* Adds spacing between list items */
+    padding: 10px; /* Adds padding inside each list item */
+    background-color: #333; /* Dark gray background */
+    color: #fff; /* White text for readability */
+    cursor: pointer; /* Changes the cursor to indicate interactivity */
+    border-radius: 8px; /* Rounds the corners of each item */
+    text-align: center; /* Centers the text */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+ul#films li:hover {
+    background-color: #555; /* Slightly lighter gray on hover */
+}
+
+ul#films li.sold-out {
+    color: #aaa; /* Grays out the text for sold-out movies */
+    text-decoration: line-through; /* Adds a strike-through to sold-out movies */
+}
+
+/* Main section for movie details (Right Container) */
+#movie-details {
+    flex: 2; /* Takes up 2 parts of the container's width */
+    background-color: #fff; /* White background for contrast */
+    padding: 20px; /* Adds space inside the main section */
+    border-radius: 8px; /* Rounds the corners */
+    text-align: center; /* Centers the content */
+    color: #333; /* Dark text for readability */
+    border: 1px solid #ccc; /* Adds a light border */
+    display: flex; /* Flexbox layout for alignment */
+    flex-direction: column; /* Stacks child elements vertically */
+    justify-content: center; /* Centers content vertically */
+    align-items: center; /* Centers content horizontally */
+}
+
+/* Styling for the movie poster image */
+#poster {
+    width: 100%; /* Makes the poster take up the full width */
+    max-height: 70%; /* Ensures the poster doesn’t exceed 70% of its container */
+    object-fit: cover; /* Maintains aspect ratio and crops the image if necessary */
+    border-radius: 8px; /* Rounds the corners of the image */
+}
+
+/* Styling for the movie details text */
+#details {
+    margin-top: 15px; /* Adds spacing above the details section */
+}
+
+#title {
+    font-size: 2rem; /* Large font size for the movie title */
+    margin-bottom: 10px; /* Adds spacing below the title */
+    color: #000; /* Black text for the title */
+}
+
+strong {
+    font-weight: bold; /* Bold font for labels */
+}
+
+#runtime-value, #showtime-value, #tickets-value {
+    font-weight: normal; /* Normal font for the values */
+    margin: 5px 0; /* Adds vertical spacing between values */
+    font-size: 1rem; /* Standard font size */
+    color: #555; /* Slight gray for less emphasis */
+}
+
+/* Styling for buttons */
+button {
+    margin: 10px; /* Adds spacing around buttons */
+    padding: 10px 20px; /* Adds padding inside the buttons */
+    font-size: 1rem; /* Sets the font size for buttons */
+    border: none; /* Removes default border */
+    border-radius: 5px; /* Rounds the corners */
+    cursor: pointer; /* Changes cursor to indicate interactivity */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Buy Ticket Button */
+#buy-ticket {
+    background-color: #007bff; /* Bright blue background */
+    color: #fff; /* White text */
+}
+
+#buy-ticket:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+#buy-ticket:disabled {
+    background-color: yellow; /* Turns yellow when sold out */
+    color: #000; /* Black text for contrast */
+    cursor: not-allowed; /* Indicates the button is disabled */
+}
+
+/* Sold Out Button Styling */
+button.sold-out {
+    background-color: #f0ad4e; /* Orange background for sold-out status */
+    color: #fff; /* White text */
+    cursor: not-allowed; /* Indicates the button is disabled */
+}
+
+button.sold-out:hover {
+    background-color: #ec971f; /* Slightly darker orange on hover */
+}
+
+/* Delete Button */
+button.delete-button {
+    background-color: #d9534f; /* Red background for delete button */
+    color: #fff; /* White text */
+}
+
+button.delete-button:hover {
+    background-color: #c9302c; /* Darker red on hover */
+}
+
+/* Scrollbar Styling for Sidebar */
+aside#sidebar::-webkit-scrollbar {
+    width: 8px; /* Sets the scrollbar width */
+}
+
+aside#sidebar::-webkit-scrollbar-thumb {
+    background-color: #0056b3; /* Blue color for the scrollbar thumb */
+    border-radius: 4px; /* Rounds the scrollbar thumb */
+}
+
+aside#sidebar::-webkit-scrollbar-track {
+    background-color: #007bff; /* Lighter blue for the scrollbar track */
+}
+
+
+
