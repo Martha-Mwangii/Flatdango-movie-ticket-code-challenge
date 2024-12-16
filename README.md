@@ -1,6 +1,6 @@
 # Flatdango
 Flatdango is a mini web application that allows users to purchase movie tickets from the Flatiron Movie Theater. Users can view movie details, see available tickets, and buy tickets for their favorite films.
-This is the live page: (https://martha-mwangii.github.io/Flatdango-movie-ticket-code-challenge/)
+This is the live page: https://martha-mwangii.github.io/Flatdango-movie-ticket-code-challenge/
 
 ## Table of Contents
 
